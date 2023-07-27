@@ -1,0 +1,9 @@
+{
+    "this_host": "www.example.com",
+    "app_port": "12345",
+    "proxy_addr": "http://127.0.0.1:8000",
+    "logout_path": "/lofasefaskjl33",
+    "resource_path": "/6d124ab7aa9f88890a6bcd3c4",
+    "login_path": "/56e9000c6d124ab7aa9f88ffa5f863ed",
+    "cookie_sec": "d115890a6e4d4ddca5bcd3c4c0e16135"
+}

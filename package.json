@@ -1,0 +1,34 @@
+{
+    "name": "login-and-reverse-proxy",
+    "version": "0.0.0",
+    "private": true,
+    "author": {
+        "name": "An Guangyan & Jared Hanson",
+        "email": "example@example.com",
+        "url": "https://orgy.ltd/"
+    },
+    "license": "Unlicense",
+    "scripts": {
+        "start": "node ./bin/www"
+    },
+    "dependencies": {
+        "@webantic/nginx-config-parser": "^1.5.0",
+        "connect-ensure-login": "^0.1.1",
+        "connect-sqlite3": "^0.9.13",
+        "cookie-parser": "~1.4.4",
+        "csurf": "^1.11.0",
+        "deasync": "^0.1.28",
+        "debug": "~2.6.9",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "express-session": "^1.17.2",
+        "http-errors": "~1.6.3",
+        "http-proxy-middleware": "^2.0.6",
+        "mkdirp": "^1.0.4",
+        "morgan": "~1.9.1",
+        "passport": "^0.6.0",
+        "passport-local": "^1.0.0",
+        "pluralize": "^8.0.0",
+        "sqlite3": "^5.0.2"
+    }
+}
