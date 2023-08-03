@@ -27,7 +27,7 @@ if [ $USE_FILE -eq 1 ]; then
     # send file
     curl -X POST -F text="$FILENAME" \
       -F "file=@$MESSAGE" \
-      -F token=TOKEN \
+      -F token=$TOKEN \
       -H "Content-Type: multipart/form-data" \
       $TARGET_URL
 else
