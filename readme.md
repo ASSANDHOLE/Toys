@@ -19,10 +19,10 @@ and sends them to the user.
 
 Requirements:
 ```shell
-# requires python-telegram-bot version 20.0, i.e. `--pre`
+# requires python-telegram-bot version >= 20.0
 # see https://github.com/python-telegram-bot/python-telegram-bot
-pip install python-telegram-bot --pre
-pip install python-telegram-bot[job-queue] --pre
+pip install python-telegram-bot
+pip install python-telegram-bot[job-queue]
 pip install requests
 ```
 
@@ -33,6 +33,35 @@ All files are in folder [web](./web).
 
 It provides a REST API to send notifications to a user.
 It also provides a simple web page for send notifications.
+
+**Note**
+
+If you plan to use [login_and_proxy](https://github.com/ASSANDHOLE/login_and_proxy) as a proxy for web-based upload,
+Use [main_proxied.py](./web/main_proxied.py) instead of [main.py](./web/main.py).
+
+And in your reverse proxy software, like `nginx`, you should add rules:
+
+```nginx
+server {
+    ...
+    
+    location / {
+        proxy_redirect off;
+        proxy_pass http://127.0.0.1:12345;  # login_and_proxy port
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /update {  # for upload througn REST API
+        proxy_redirect off;
+        proxy_pass http://127.0.0.1:23456;  # this app's port
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+}
+```
+
+And remember to change the service file to use `main_proxied.py` instead of `main.py`.
 
 Requirements:
 ```shell
