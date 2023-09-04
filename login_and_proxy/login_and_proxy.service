@@ -1,0 +1,13 @@
+[Unit]
+After=network.target
+Description=Login and Proxy Service
+
+[Service]
+Environment="NODE_ENV=production"
+ExecStart=/path_to_node_executable/node path_to_dir/bin/www
+Restart=on-failure
+RestartSec=5
+User=your_user
+
+[Install]
+WantedBy=multi-user.target
