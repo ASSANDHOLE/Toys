@@ -1,0 +1,11 @@
+[Unit]
+Description=Notification REST API
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/path/to/python /path/to/web/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

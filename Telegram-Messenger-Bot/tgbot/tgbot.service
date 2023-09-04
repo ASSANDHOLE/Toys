@@ -1,0 +1,11 @@
+[Unit]
+Description=Control of telegram bot
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/path/to/python /path/to/tgbot/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
