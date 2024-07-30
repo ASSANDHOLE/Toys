@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Fire Practice Modes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        .mode {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .mode h3 {
+            display: inline-block;
+        }
+
+        .mode-buttons {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+
+        .mode a {
+            text-decoration: none;
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .mode .download-links a {
+            color: #4CAF50;
+            background-color: white;
+            padding: 5px 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Dry Fire Practice</h1>
+</header>
+<main>
+    <section>
+        <h2>About This Site</h2>
+        <p>This website is designed to assist you in practicing dry firing at home. It provides different modes to simulate target practice scenarios, enhancing your shooting skills by providing visual and auditory feedback. Each mode can be customized to suit your training needs, and the pages can be downloaded for offline use.</p>
+    </section>
+    <section>
+        <h2>Available Modes</h2>
+        <div class="mode">
+            <h3>Random Target Spawner</h3>
+            <div class="mode-buttons">
+                <a href="mode1.html">Go to Random Target Spawner</a>
+                <a class="download-links" href="mode1.html" download="mode1.html">▼ Download</a>
+            </div>
+            <p>This mode spawns a target at random intervals within a defined area. You can customize the interval time, deviation, beep duration, background sound volume, pitch multiplier, background color, and target size and image.</p>
+        </div>
+        <div class="mode">
+            <h3>Moving Target Tracking</h3>
+            <div class="mode-buttons">
+                <a href="mode2.html">Go to Moving Target Tracking</a>
+                <a class="download-links" href="mode2.html" download="mode2.html">▼ Download</a>
+            </div>
+            <p>This mode features a moving target within a defined area. You can customize the target size, speed, speed variation, background color, and target image. The target moves in random directions, changing speed and direction upon hitting the container boundaries.</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>2024 Dry Fire Practice</p>
+</footer>
+</body>
+</html>
